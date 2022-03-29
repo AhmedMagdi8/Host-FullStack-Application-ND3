@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
   node: 
-    circleci/node@4.7.0
+    circleci/node@4.1.0
   # different jobs are calles later in the workflows sections
 jobs:
   build:
@@ -10,7 +10,10 @@ jobs:
       # the base image can run most needed actions with orbs
       - image: "cimg/node:14.15.3"
     steps:
-      - node/install
+      - checkout
+      - node/install:
+          node-version: '14.15.3'
+      - run: node --version
       - checkout
       - run:
           name: Front-End Install
