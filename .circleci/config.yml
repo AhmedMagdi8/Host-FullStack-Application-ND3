@@ -18,7 +18,6 @@ jobs:
       - run: node --version
       - checkout
       - aws-cli/setup
-      - aws-eb-cli/setup
       - run:
           name: Front-End Install
           command: |
