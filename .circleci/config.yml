@@ -1,7 +1,8 @@
 version: 2.1
 orbs:
   # orgs contain basc recipes and reproducible actions (install node, aws, etc.)
-  node: version:stable
+  node: 
+    circleci/node@4.7.0
   # different jobs are calles later in the workflows sections
 jobs:
   build:
