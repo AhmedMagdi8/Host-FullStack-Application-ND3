@@ -41,4 +41,4 @@ jobs:
       - run:
           name: Front-End deploy
           command: |
-            npm run backend:deploy
+            npm run frontend:deploy
