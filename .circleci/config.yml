@@ -5,12 +5,13 @@ orbs:
   aws-cli: circleci/aws-cli@1.3.1
   eb : circleci/aws-elastic-beanstalk@2.0.1
   # different jobs are calles later in the workflows sections
+
+general:
+  branches:
+    only:
+      - master # list of branches to build
 jobs:
   build:
-    filters:
-      branches:
-        only:
-          - master
     docker:
       # the base image can run most needed actions with orbs
       - image: "cimg/base:stable"
